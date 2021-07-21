@@ -62,6 +62,7 @@ for j = 1:N
  tmppath = paths0{j};
  plot3(tmppath(1, :), tmppath(2, :), tmppath(3, :), 'blue', 'linewidth', 1.0);
 end
+plot3(p(1, :), p(2, :), p(3, :), 'red', 'linewidth', 1.5);
 %title('Original Samples');
 hold off;
 %}
