@@ -5,12 +5,9 @@
 clear all;
 close all;
 % add paths
+addpath('./Phase-AmplitudeFunction')
+addpath('./Phase-Amplitude-modeling')
 addpath('./RealData')
-addpath('./PlotEarth')
-addpath('./amplitude_separation')
-addpath('./Bayan')
-addpath('./DataBayan')
-addpath('./Bayan/denseFD_for_unparameterized_curves')
 % load data
 load ProcessHurricanePaths.mat;
 % variables for curves
@@ -19,9 +16,9 @@ T = 100;
 t = linspace(0, 1, T);
 N = 10; % the number of samples
 for i=1:N
-    Resampled_track = ReSampleSphereTraj(PPProcess_Hurri_Path{2*i - 1}, T);
-    Smoothed_track = SmoothPath(Resampled_track, 7, 1);
-    paths0{i} = Smoothed_track;
+ Resampled_track = ReSampleSphereTraj(PPProcess_Hurri_Path{2*i - 1}, T);
+ Smoothed_track = SmoothPath(Resampled_track, 7, 1);
+ paths0{i} = Smoothed_track;
 end
 % calculating the sample Frechet function on the space of parameterized
 % curve
