@@ -5,11 +5,9 @@
 clear all;
 close all;
 % add paths
-addpath('./RealData')
-addpath('./PlotEarth')
-addpath('./amplitude_separation')
-addpath('./Bayan')
-addpath('./Bayan/denseFD_for_unparameterized_curves')
+addpath('./Phase-AmplitudeFunction')
+addpath('./Phase-Amplitude-modeling')
+addpath('./SimulatedData')
 % load data
 load swainson.mat;
 % variables for curves
