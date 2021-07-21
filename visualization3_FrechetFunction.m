@@ -7,12 +7,13 @@
 clear all;
 close all;
 % add paths
-addpath('./amplitude_separation')
-addpath('./Bayan/denseFD_for_unparameterized_curves')
-addpath('./Bayan/denseFD_for_unparameterized_curves/SimulatedCurves/5')
+addpath('./Phase-AmplitudeFunction')
+addpath('./Phase-Amplitude-modeling')
+addpath('./SimulatedData')
 % load curves 
 load SimulatedCurves2.mat;
-%
+% for comparison we can compute previous Frechet mean  
+%{
 [mup,muq,mupath, KF_30_60] = KarcherMean(paths0, 'slow', 30, 60);
 [mup,muq,mupath, KF_30_120] = KarcherMean(paths0, 'slow', 30, 120);
 [mup,muq,mupath, KF_30_240] = KarcherMean(paths0, 'slow', 30, 240);
@@ -35,7 +36,8 @@ load SimulatedCurves2.mat;
     30000.6, 50, 0.0001, 0.0000001, 0.00001, 60, 30, 30);
 n = 6;
 disp(num2str(SFF, n));
-%
+% for comparison one can look to the results from previous code
+%{
 disp(num2str(KF_30_60, n));
 disp(num2str(KF_30_120, n));
 disp(num2str(KF_30_240, n));
@@ -47,7 +49,7 @@ disp(num2str(KF_120_120, n));
 disp(num2str(KF_120_240, n));
 %}
 %start drawing
-% T = size(p, 2); % T=size(p2, 2)
+% T = size(p, 2);
 N = length(paths0);
 % Draw curves:
 figure(1)
