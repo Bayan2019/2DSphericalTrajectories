@@ -6,29 +6,12 @@
 clear all;
 close all;
 % add paths
-addpath('./RealData')
-addpath('./PlotEarth')
-addpath('./amplitude_separation')
-addpath('./Bayan')
-addpath('./Bayan/denseFD_for_unparameterized_curves')
-addpath('./DataBayan')
-addpath('./EvaluationBayan/SimulationsUniform/SimulatedCurves')
-addpath('./EvaluationBayan/SimulationsUniform/Samples8')
-addpath('./Bayan/denseFD_for_unparameterized_curves/SimulatedCurves/SimulatedPaths')
+addpath('./Phase-AmplitudeFunction')
+addpath('./Phase-Amplitude-modeling')
+addpath('./SimulatedData')
 % load the data
 load SimulationPaths8.mat;
 load gammas0.mat
-% reparameterized the all paths (creating 'SimulatedPaths8.mat')
-%{
-for i=1:8
- for j=1:10
-  p = paths0{(i - 1)*10 + j};
-  gamma = gammas0{j};
-  p = Group_Action_by_Gamma_p(p, gamma);
-  paths8{(i - 1)*10 + j} = p;
- end
-end
-%}
 % Get pair of curves p1 and p2 :
 p1 = paths0{1};
 p2 = paths0{6};
