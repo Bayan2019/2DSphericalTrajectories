@@ -7,7 +7,7 @@ close all;
 % add paths
 addpath('./Phase-AmplitudeFunction')
 addpath('./Phase-Amplitude-modeling')
-addpath('./ReallData')
+addpath('./RealData')
 % load data
 load swainson.mat;
 % variables for curves
