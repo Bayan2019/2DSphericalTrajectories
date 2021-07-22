@@ -1,7 +1,7 @@
 
-# Matlab code for the Phase and Amplitude analysis of spherical trajectories.
+# Matlab code Amplitude Mean of Functional Data on $\mathbb{S}^2$.
 
-## Main function:
+## Main functions:
 - theta_geodesic.m
 - theta_geodesic_alignment2.m
 - Inverse_exponential_map.m
